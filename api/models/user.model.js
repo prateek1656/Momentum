@@ -28,7 +28,7 @@ module.exports = (sequelize, Sequelize) => {
             allowNull: false,
             unique: true
         },
-		join_login:{
+		first_login:{
 			type: Sequelize.DATE
 		},
 		last_login:{

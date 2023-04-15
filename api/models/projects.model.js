@@ -14,6 +14,14 @@ module.exports = (sequelize, Sequelize) => {
 			type: Sequelize.STRING,
             allowNull: true,
 		},
+        documents_url:{
+			type: Sequelize.STRING,
+            allowNull: false,
+		},
+        policies_url:{
+			type: Sequelize.STRING,
+            allowNull: false,
+		},
 		contribution_type:{
 			type: Sequelize.UUID,
             allowNull: false,

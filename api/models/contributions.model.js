@@ -14,10 +14,6 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.UUID,
 			allowNull: false,
         },
-		reward_type_id: {
-			type: Sequelize.UUID,
-			allowNull: false,
-		}
     }, {
         underscored: true,
         freezeTableName: true,
