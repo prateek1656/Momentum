@@ -3,9 +3,9 @@
 const db = require('../models')
 
 
-const reward_typeCreateController = async (req, res, next) => {
+const Reward_typeCreateController = async (req, res, next) => {
     const body = req.body
-    const model = db.reward_type
+    const model = db.Reward_type
     model.create(body).then(
         (result) => {
             res.json(result)
@@ -19,4 +19,4 @@ const reward_typeCreateController = async (req, res, next) => {
 }
     
     
-module.exports = reward_typeCreateController
+module.exports = Reward_typeCreateController

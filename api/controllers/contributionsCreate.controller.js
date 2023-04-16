@@ -3,9 +3,9 @@
 const db = require('../models')
 
 
-const contributionsCreateController = async (req, res, next) => {
+const ContributionsCreateController = async (req, res, next) => {
     const body = req.body
-    const model = db.contributions
+    const model = db.Contributions
     model.create(body).then(
         (result) => {
             res.json(result)
@@ -19,4 +19,4 @@ const contributionsCreateController = async (req, res, next) => {
 }
     
     
-module.exports = contributionsCreateController
+module.exports = ContributionsCreateController

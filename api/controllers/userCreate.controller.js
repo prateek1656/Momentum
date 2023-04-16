@@ -3,9 +3,9 @@
 const db = require('../models')
 
 
-const userCreateController = async (req, res, next) => {
+const UserCreateController = async (req, res, next) => {
     const body = req.body
-    const model = db.user
+    const model = db.User
     model.create(body).then(
         (result) => {
             res.json(result)
@@ -19,4 +19,4 @@ const userCreateController = async (req, res, next) => {
 }
     
     
-module.exports = userCreateController
+module.exports = UserCreateController

@@ -5,8 +5,8 @@ const ControllerOrders = require('./orders')
 const QueryUtils = require('../utils/query.utils')
 
 
-const contribution_typeSearchController = async (req, res, next) => {
-    const model = db.contribution_type
+const Contribution_typeSearchController = async (req, res, next) => {
+    const model = db.Contribution_type
     try {
         // Get all query parameters
         let limit = parseInt(req.query.limit)
@@ -116,5 +116,5 @@ const contribution_typeSearchController = async (req, res, next) => {
 }
     
     
-module.exports = contribution_typeSearchController
+module.exports = Contribution_typeSearchController
 

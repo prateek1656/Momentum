@@ -3,7 +3,7 @@
 const db = require('../models')
 
 
-const contributionsUpdateController = async (req, res, next) => {
+const ContributionsUpdateController = async (req, res, next) => {
     const body = req.body
     const id = body.id
     if (id == null) {
@@ -13,7 +13,7 @@ const contributionsUpdateController = async (req, res, next) => {
             'msg': 'id of the object to be updated is missing from body'
         })
     }
-    const model = db.contributions
+    const model = db.Contributions
     model.update(body, {where: {id: id}}).then(
         (result) => {
             res.status(204).send()
@@ -27,4 +27,4 @@ const contributionsUpdateController = async (req, res, next) => {
 }
     
     
-module.exports = contributionsUpdateController
+module.exports = ContributionsUpdateController

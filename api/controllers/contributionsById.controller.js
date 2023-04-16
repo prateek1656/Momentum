@@ -3,9 +3,9 @@ const ControllerIncludes = require('./includes')
 const ControllerAttributes= require('./attributes')
 
 
-const contributionsByIdController = async (req, res, next) => {
+const ContributionsByIdController = async (req, res, next) => {
     try {
-        const model = db.contributions  
+        const model = db.Contributions  
         // Get all query parameters
         let reqAttributes = req.query.attributes
         let reqIncludes = req.query.includes
@@ -60,4 +60,4 @@ const contributionsByIdController = async (req, res, next) => {
 }
     
     
-module.exports = contributionsByIdController
+module.exports = ContributionsByIdController

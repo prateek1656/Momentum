@@ -5,8 +5,8 @@ const ControllerOrders = require('./orders')
 const QueryUtils = require('../utils/query.utils')
 
 
-const projectsSearchController = async (req, res, next) => {
-    const model = db.projects
+const ProjectsSearchController = async (req, res, next) => {
+    const model = db.Projects
     try {
         // Get all query parameters
         let limit = parseInt(req.query.limit)
@@ -116,5 +116,5 @@ const projectsSearchController = async (req, res, next) => {
 }
     
     
-module.exports = projectsSearchController
+module.exports = ProjectsSearchController
 
