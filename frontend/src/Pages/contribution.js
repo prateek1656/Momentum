@@ -7,37 +7,37 @@ import Sidebar from "../components/sidebar";
 const Contribution = () => {
   return (
     <>
-    <div className="container">
+    <div classNameName="container">
         <Sidebar/>
-    <div className="title">
+    <div classNameName="title">
      Contribution
     </div>
-    <div className="contribution">
+    <div classNameName="contribution">
         Contribution Project
-        <button type="button" class="btn btn-dark">My Work</button>
+        <button type="button" className="btn btn-dark">My Work</button>
     </div>
-    <div className="contributionComponent">
-        <div className="details">
+    <div classNameName="contributionComponent">
+        <div classNameName="details">
            
         <img src="https://blog.hubbado.com/content/images/2020/01/projectmanager.png" alt="" />
         
-        <div className="otherDetails">
-        <div class="labels">End Date: 12 May 2023</div>
-        <div class="labels">Reward: E-Certificate</div>
-        <div class="labels">Contribution Type: Code</div>
+        <div classNameName="otherDetails">
+        <div className="labels">End Date: 12 May 2023</div>
+        <div className="labels">Reward: E-Certificate</div>
+        <div className="labels">Contribution Type: Code</div>
         </div>
         </div>
-        <div className="dates">
-          <div className="belowImg">
-          <div class="labels2">My First Project</div>
-          <div class="labels2">Last Updated At: 2 April 2023</div>
+        <div classNameName="dates">
+          <div classNameName="belowImg">
+          <div className="labels2">My First Project</div>
+          <div className="labels2">Last Updated At: 2 April 2023</div>
           </div>
-          <div className="dateDetails">
-          <div class="labels2">40% completed</div>
-          <div class="labels2">Created At: 1 March 2023</div>
+          <div classNameName="dateDetails">
+          <div className="labels2">40% completed</div>
+          <div className="labels2">Created At: 1 March 2023</div>
           </div>
         </div>
-        <div className="desc">
+        <div classNameName="desc">
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias et quibusdam aliquid incidunt suscipit nisi eaque cumque distinctio dolorum fuga est veritatis enim odio alias, vero soluta nemo necessitatibus. Exercitationem dolores quia asperiores fuga, ex, molestias debitis porro vero architecto explicabo id! Eligendi eaque quae facere nisi excepturi nostrum nam cum velit et corporis? Dolor praesentium harum nostrum optio modi. Dolores, ad? Ullam, ad amet consectetur, rem itaque nam eius enim natus nisi dolores inventore error. Ea nobis delectus, est aliquam aspernatur, commodi corporis cupiditate deserunt obcaecati aut aliquid, iusto nemo officia inventore? Veniam libero totam beatae expedita eos commodi!
         </div>
     </div>
