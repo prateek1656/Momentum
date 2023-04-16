@@ -124,6 +124,7 @@ const AppUserSignInModal = (props) => {
                     value={userEmail}
                     placeholder="Email"
                     type="email"
+                    label='email'
                     onIonChange={(e) => setUserEmail(e.target.value)}
                 >
                 </IonInput>
@@ -131,6 +132,7 @@ const AppUserSignInModal = (props) => {
                     value={userPassword}
                     placeholder="Password"
                     type="password"
+                    label='password'
                     onIonInput={(e) => setUserPassword(e.target.value)}
                 >
                 </IonInput>
@@ -154,6 +156,7 @@ const AppUserSignInModal = (props) => {
                     value={userEmail}
                     placeholder="Email"
                     type="email"
+                    label='email'
                     onIonChange={(e) => setUserEmail(e.target.value)}
                 >
                 </IonInput>
@@ -161,6 +164,7 @@ const AppUserSignInModal = (props) => {
                     value={userPassword}
                     placeholder="Password"
                     type="password"
+                    label='password'
                     onIonInput={(e) => setUserPassword(e.target.value)}
                 >
                 </IonInput>
@@ -168,6 +172,7 @@ const AppUserSignInModal = (props) => {
                     value={confirmPassword}
                     placeholder="Confirm Password"
                     type="password"
+                    label='password'
                     onIonInput={(e) => setConfirmPassword(e.target.value)}
                 >
                 </IonInput>
@@ -189,6 +194,7 @@ const AppUserSignInModal = (props) => {
                     value={userEmail}
                     placeholder="Email"
                     type="email"
+                    label='email'
                     onIonChange={(e) => setUserEmail(e.target.value)}
                 >
                 </IonInput>

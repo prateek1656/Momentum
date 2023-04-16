@@ -17,6 +17,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "start-local": "set REACT_APP_ENV=local && react-scripts start",
+    "start-dev": "REACT_APP_ENV=dev react-scripts start",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
