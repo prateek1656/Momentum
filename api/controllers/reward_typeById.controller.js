@@ -3,9 +3,9 @@ const ControllerIncludes = require('./includes')
 const ControllerAttributes= require('./attributes')
 
 
-const reward_typeByIdController = async (req, res, next) => {
+const Reward_typeByIdController = async (req, res, next) => {
     try {
-        const model = db.reward_type  
+        const model = db.Reward_type  
         // Get all query parameters
         let reqAttributes = req.query.attributes
         let reqIncludes = req.query.includes
@@ -60,4 +60,4 @@ const reward_typeByIdController = async (req, res, next) => {
 }
     
     
-module.exports = reward_typeByIdController
+module.exports = Reward_typeByIdController

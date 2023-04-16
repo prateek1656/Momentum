@@ -16,10 +16,10 @@ if (dbConfig != null) {
     db.Sequelize = Sequelize;
     db.sequelize = sequelize;
     // models
-    db.User = require('./user.model')(sequelize, Sequelize)
-    db.Project = require('./projects.model')(sequelize, Sequelize)
-    db.Contribution_type = require('./contribution_type.model')(sequelize, Sequelize)
-    db.Reward_type = require('./reward_type.model')(sequelize, Sequelize)
-    db.Contribution = require('./contributions.model')(sequelize, Sequelize)
+    db.User = require('./User.model')(sequelize, Sequelize)
+    db.Projects = require('./Projects.model')(sequelize, Sequelize)
+    db.Contribution_type = require('./Contribution_type.model')(sequelize, Sequelize)
+    db.Reward_type = require('./Reward_type.model')(sequelize, Sequelize)
+    db.Contributions = require('./Contributions.model')(sequelize, Sequelize)
 } 
 module.exports = db;

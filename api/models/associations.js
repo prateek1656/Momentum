@@ -15,17 +15,17 @@ if (dbConfig != null) {
 console.log('INFO: setting up associations')
 
 const setAssociations = function(db) {
-	db.Contribution.hasOne(db.Project, {foreignKey: 'project_id'})
-    db.Project.belongsTo(db.Contribution, {foreignKey: 'project_id'})
+	db.Projects.hasMany(db.Contributions, {foreignKey: 'project_id'})
+    db.Contributions.belongsTo(db.Projects, {foreignKey: 'project_id'})
                                                                             
-	db.User.hasMany(db.Contribution, {foreignKey: 'user_id'})
-    db.Contribution.belongsTo(db.User, {foreignKey: 'user_id'})
+	db.User.hasMany(db.Contributions, {foreignKey: 'user_id'})
+    db.Contributions.belongsTo(db.User, {foreignKey: 'user_id'})
 	
-	db.Contribution_type.hasOne(db.Project, {foreignKey: 'contribution_type_id', as: 'projectContributionType'})
-    db.Project.belongsTo(db.Contribution_type, {foreignKey: 'contribution_type_id', as: 'projectContributionType'})
+	db.Contribution_type.hasMany(db.Projects, {foreignKey: 'contribution_type_id'})
+    db.Projects.belongsTo(db.Contribution_type, {foreignKey: 'contribution_type_id'})
 	
-	// db.Project.hasOne(db.Reward_type, {foreignKey: 'reward_type_id', as: 'RewardType'})
-    // db.Reward_type.belongsTo(db.Project, {foreignKey: 'reward_type_id', as: 'RewardType'})
+	db.Reward_type.hasMany(db.Projects, {foreignKey: 'reward_type_id'})
+    db.Projects.belongsTo(db.Reward_type, {foreignKey: 'reward_type_id'})
 }
 
 module.exports = setAssociations

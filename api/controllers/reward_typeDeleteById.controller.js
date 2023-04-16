@@ -3,8 +3,8 @@
 const db = require('../models')
 
 
-const reward_typeDeleteByIdController = async (req, res, next) => {
-    const model = db.reward_type
+const Reward_typeDeleteByIdController = async (req, res, next) => {
+    const model = db.Reward_type
     model.destroy(
         {where: {id: req.params.id},}
     ).then(
@@ -20,4 +20,4 @@ const reward_typeDeleteByIdController = async (req, res, next) => {
 }
     
     
-module.exports = reward_typeDeleteByIdController
+module.exports = Reward_typeDeleteByIdController
