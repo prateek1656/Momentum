@@ -48,7 +48,15 @@
    border-radius: 8px;
    width:fit-content;
    padding: 0.5em 1.5em 0.5em 1.5em;
+} 
+.contriBtn:hover{
+    background-color: rgb(66, 152, 226);
 }
+.contriBtn a{
+    text-decoration: none;
+    color: white;
+}
+.contriBtn
 .completed{
     font-size: 18px;
     font-weight: 500;

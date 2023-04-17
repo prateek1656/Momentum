@@ -1,6 +1,8 @@
 import './App.css';
-import Contribution from '../src/Pages/Contribution/contribution';
-import Project from './Pages/project/Project';
+import ContributionFeed from '../src/Pages/Contribution Feed/ContributionFeed';
+import Contribution from '../src/Pages/Contribution/contribution'
+import ProjectFeed from '../src/Pages/Project Feed/projectFeed';
+import Project from './Pages/Project/Project';
 import Feed from '../src/Pages/Feed/feed';
 import { AuthContextProvider, UserAuth } from './contexts/AppFirebaseContext';
 import AppProtectedRouteOne from './components/AppProtectedRoutes';
@@ -8,6 +10,7 @@ import AppUserSignInModal from './components/userSignInModal';
 import { IonReactRouter } from '@ionic/react-router';
 import { Switch, Route } from 'react-router-dom';
 import CreateProject from './Pages/Create Project/createProject';
+import EditProject from './Pages/Edit Project/editProject';
 function App() {
   // let [appUser, setAppUser] = useState('')
   return (
@@ -17,14 +20,14 @@ function App() {
       {/* <Sidebar /> */}
       {/* <Contribution/> */}
       <Switch>
-      <Route exact path="/project">
+      <Route exact path="/projects">
         <AppProtectedRouteOne>
-          <Project/>
+          <ProjectFeed/>
         </AppProtectedRouteOne>
       </Route>
-      <Route exact path="/contribution">
+      <Route exact path="/contributions">
         <AppProtectedRouteOne>
-          <Contribution/>
+          <ContributionFeed/>
         </AppProtectedRouteOne>
       </Route>
       <Route exact path="/feed">
@@ -37,9 +40,24 @@ function App() {
           <CreateProject/>
         </AppProtectedRouteOne>
       </Route>
+      <Route exact path="/editproject">
+        <AppProtectedRouteOne>
+          <EditProject/>
+        </AppProtectedRouteOne>
+      </Route>
       <Route exact path="/login">
         <AppProtectedRouteOne>
-          <Project/>
+         hello
+        </AppProtectedRouteOne>
+      </Route>
+      <Route exact path="/project/:project_id">
+        <AppProtectedRouteOne>
+       <Contribution/>
+        </AppProtectedRouteOne>
+      </Route>
+      <Route exact path="/projectDetails">
+        <AppProtectedRouteOne>
+         <Project/>
         </AppProtectedRouteOne>
       </Route>
       </Switch>

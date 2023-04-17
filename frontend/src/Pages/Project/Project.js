@@ -18,8 +18,9 @@ const Project = () => {
       Project Title
       </div>
         <div className="buttonsProject">
+        <button type="button" class="buttonProject"><a href="/createProject">Create</a></button>
+        <button type="button" class="buttonProject"><a href="/editProject">Edit</a></button>
         <button type="button" class="buttonProject">Hold</button>
-        <button type="button" class="buttonProject">Edit</button>
         <button type="button" class="buttonProject">Reward</button>
         </div>
     </div>
