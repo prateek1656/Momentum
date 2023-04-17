@@ -9,7 +9,7 @@ import AppProtectedRouteOne from './components/AppProtectedRoutes';
 import { IonReactRouter } from '@ionic/react-router';
 import { Switch, Route } from 'react-router-dom';
 import CreateProject from './Pages/Create Project/createProject';
-
+import EditProject from './Pages/Edit Project/editProject';
 function App() {
   // let [appUser, setAppUser] = useState('')
   return (
@@ -41,9 +41,24 @@ function App() {
           <CreateProject/>
         </AppProtectedRouteOne>
       </Route>
+      <Route exact path="/editproject">
+        <AppProtectedRouteOne>
+          <EditProject/>
+        </AppProtectedRouteOne>
+      </Route>
       <Route exact path="/project/:id">
         <AppProtectedRouteOne>
-          <Project/>
+         hello
+        </AppProtectedRouteOne>
+      </Route>
+      <Route exact path="/project/:project_id">
+        <AppProtectedRouteOne>
+       <Contribution/>
+        </AppProtectedRouteOne>
+      </Route>
+      <Route exact path="/projectDetails">
+        <AppProtectedRouteOne>
+         <Project/>
         </AppProtectedRouteOne>
       </Route>
       <Route exact path="/create">

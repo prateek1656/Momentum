@@ -75,7 +75,7 @@ const Feed = () => {
                 <div className="updated">Last Updated At: {props.updatedAt}</div>
             </div>
             <div className="moreDetails">
-            <div type="button" class="feedBtn"> <a href="">Check More</a></div>
+            <div type="button" class="feedBtn"> <a href={`/project/${props.project_id}`}>Check More</a></div>
             <div className="completed">
                 {props.completed}% completed
             </div>

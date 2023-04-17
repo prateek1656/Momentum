@@ -28,15 +28,13 @@ const Contribution = () => {
     <div className="contentContribution">
         <Sidebar/>
     <div className="cont">
-    <div className="title">
-     Contribution
-    </div>
     <div className="contribution">
     <div className="title">
         Contribution Project
         </div>
         <div className="buttons">
-        <button type="button" class="btn btn-dark">My Work</button>
+        <button type="button" class="btn btn-dark btn1">Discuss</button>
+        <button type="button" class="btn btn-dark">Contribute</button>
         </div>
     </div>
     <div className="contributionComponent">
@@ -45,9 +43,11 @@ const Contribution = () => {
         <img src="https://blog.hubbado.com/content/images/2020/01/projectmanager.png" alt="" />
         
         <div className="otherDetails">
-        <div className="labels">End Date: 12 May 2023</div>
-        <div className="labels">Reward: E-Certificate</div>
-        <div className="labels">Contribution Type: Code</div>
+        <div className="labels">End Date: 1 March 2023</div>
+        <div className="labels">Reward: tax debate</div>
+        <div className="labels">Contribution Type: Money</div>
+        <div className="labels">Contribution Link: wwww.jedjee</div>
+        <div className="labels">Goal: Rs30k</div>
         </div>
         </div>
           <div className="contribelowImg">

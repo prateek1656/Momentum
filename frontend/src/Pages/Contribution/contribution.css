@@ -13,6 +13,9 @@
     text-align: left;
     padding-bottom: 0.5em;
 }
+.btn-dark{
+    margin-right: 5px;
+}
 .contribelowImg{
     display: flex;
     flex-direction: row;
@@ -51,11 +54,12 @@ img{
 }
 .labels{
     color: black;
-  font-size: 24px;
+  font-size: 20px;
+  padding: 1px;
 }
 .labels2{
     color: black;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     padding: 0.25em 0.75em 0em 0;
 }
