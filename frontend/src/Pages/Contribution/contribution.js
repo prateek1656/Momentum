@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 // import {Link, NavLink}  from "react-router-dom";
 import { useEffect, useLocation } from "react";
-import {UserAuth} from "../contexts/AppFirebaseContext"
+import {UserAuth} from "../../contexts/AppFirebaseContext"
 import "./contribution.css";
-import Sidebar from "../components/sidebar";
-import { getAppUser,getAllUserContribution } from '../contexts/FetchContext';
+import Sidebar from "../../components/sidebar";
+import { getAppUser,getAllUserContribution } from '../../contexts/FetchContext';
 
 const Contribution = () => {
   const {user} = UserAuth()

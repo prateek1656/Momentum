@@ -4,10 +4,10 @@ import Project from './Pages/project/Project';
 import Feed from '../src/Pages/Feed/feed';
 import { AuthContextProvider, UserAuth } from './contexts/AppFirebaseContext';
 import AppProtectedRouteOne from './components/AppProtectedRoutes';
-import AppUserSignInModal from './components/userSignInModal';
 import { IonReactRouter } from '@ionic/react-router';
 import { Switch, Route } from 'react-router-dom';
 import CreateProject from './Pages/Create Project/createProject';
+
 function App() {
   // let [appUser, setAppUser] = useState('')
   return (
