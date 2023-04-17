@@ -10,7 +10,7 @@ const Sidebar=()=> {
   
 <div className="sidenav">
 <div className="logo">
-    <img src="./" alt="logo" />
+    <img className='logo' src="./" alt="logo" />
   </div>
   <a href="#">Feed</a>
   <a href="#">Contribution</a>

@@ -1,0 +1,9 @@
+.contentCard{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.cardContent{
+    padding: 1em;
+}
