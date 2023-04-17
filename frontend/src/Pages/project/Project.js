@@ -2,9 +2,27 @@ import React, { useState } from "react";
 // import {Link, NavLink}  from "react-router-dom";
 import { useEffect, useLocation } from "react";
 import "./Project.css";
+import { getAllProjects,getUserAllProjects, getProject } from '../../contexts/FetchContext';
 import Sidebar from "../../components/sidebar";
 
 const Project = () => {
+  const [allProjects, setAllProjects] = useState([])
+
+  // will extract the informatio of project when will provide it's id
+    async function ProjectInfo() {
+      const id = "af5e62ff-db8f-11ed-a8b3-028836aad06a"
+        const project_details = await getProject(id)
+        // setAllProjects(projects)
+        console.log(project_details);
+    }
+    
+    useEffect(() => {
+      // Projects()
+      // UserProjects()
+      ProjectInfo()
+  }, []);
+  
+  
   return (
     <>
     <div className="contentProject">

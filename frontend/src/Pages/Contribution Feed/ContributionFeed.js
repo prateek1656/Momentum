@@ -35,21 +35,23 @@ const ContributionFeed = (props) => {
         },
     ])
   return (
-    <>
+
     <div className="contentCard">
         <Sidebar/>
     <div className="cardContent">
         <div className="title">
           Contribution  
         </div>
+        <div className="contribution_feed">
         {data.map((item)=>{
           return (
             <ContributionCard title={item.title} url={item.url} desc={item.desc} date={item.date} completed={item.completed} contribution={true}/>
-          )
-        })}
+            )
+          })}
     </div>
     </div>
-    </>
+    </div>
+
   );
 };
 

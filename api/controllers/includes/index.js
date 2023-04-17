@@ -16,6 +16,9 @@ const ControllerIncludes = {
             }
         }
     },
+    Projects: {
+        model: db.Projects,
+    }
 }
 
 module.exports = ControllerIncludes

@@ -29,13 +29,13 @@ module.exports = (sequelize, Sequelize) => {
             unique: true
         },
 		first_login:{
-			type: Sequelize.DATE
+			type: Sequelize.STRING
 		},
 		last_login:{
-			type: Sequelize.DATE
+			type: Sequelize.STRING
 		},
-        caim_id:{
-            type: Sequelize.UUID,
+        ciam_id:{
+            type: Sequelize.STRING,
             allowNull: false,
             unique: true
         }
