@@ -56,11 +56,13 @@ module.exports = (sequelize, Sequelize) => {
 		},
 		is_active:{
 			type: Sequelize.BOOLEAN, 
-            allowNull: false
+            allowNull: false,
+            defaultValue: true
 		},
 		is_rewarded:{
 			type: Sequelize.BOOLEAN, 
-            allowNull: false
+            allowNull: false,
+            defaultValue: false
 		},
         comments :{
 			type: Sequelize.JSON,
