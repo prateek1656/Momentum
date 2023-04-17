@@ -41,6 +41,11 @@ function App() {
           <CreateProject/>
         </AppProtectedRouteOne>
       </Route>
+      <Route exact path="/editproject">
+        <AppProtectedRouteOne>
+          <EditProject/>
+        </AppProtectedRouteOne>
+      </Route>
       <Route exact path="/project/:id">
         <AppProtectedRouteOne>
          hello
