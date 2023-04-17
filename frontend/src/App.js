@@ -22,6 +22,11 @@ function App() {
           <Project/>
         </AppProtectedRouteOne>
       </Route>
+      <Route exact path="/contribution">
+        <AppProtectedRouteOne>
+          <Contribution/>
+        </AppProtectedRouteOne>
+      </Route>
       </Switch>
     </IonReactRouter>
     </div>
