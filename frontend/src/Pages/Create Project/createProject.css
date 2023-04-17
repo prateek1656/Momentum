@@ -41,8 +41,9 @@
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     padding: 1em;
-    height: 95%;
+    height: 80%;
     overflow: scroll;
+    /* margin: 0; */
 }
 /* .headings{
     font-size: 25px;

@@ -46,6 +46,29 @@ async function createUser(userData) {
     }
 }
 
+async function createProject(ProjectData) {    
+    let apiUrl=`${API_HOST}/${API_VERSION}/project/`
+    const option= {
+        headers: {
+        'Content-Type': 'application/json'
+    }}
+    const body =  JSON.stringify(ProjectData)
+    const res = await axios.post(
+        apiUrl,
+        body,
+        option
+    )
+    if (res.status === 200) {
+            const resJson = await res.data
+            console.log(resJson);
+            // callback();
+            if (resJson.length > 0) { 
+                return 'success'
+            }
+            return resJson
+    }
+}
+
 
 
 
@@ -65,6 +88,7 @@ const AppUserContext = createContext({
 
 export {
     createUser,
+    createProject
 }
 
 export default AppUserContext;
