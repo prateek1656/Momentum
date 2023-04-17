@@ -1,10 +1,28 @@
 import React, { useState } from "react";
 // import {Link, NavLink}  from "react-router-dom";
 import { useEffect, useLocation } from "react";
+import {UserAuth} from "../contexts/AppFirebaseContext"
 import "./contribution.css";
-import Sidebar from "../../components/sidebar";
+import Sidebar from "../components/sidebar";
+import { getAppUser,getAllUserContribution } from '../contexts/FetchContext';
 
 const Contribution = () => {
+  const {user} = UserAuth()
+  const [allContributions, setAllContributions] = useState([])
+  
+    async function Contributions() {
+        const user_details = await getAppUser(user.uid)
+        console.log(user_details);
+        const contributions = await getAllUserContribution(user_details.id)
+        setAllContributions(contributions)
+        console.log(contributions);
+    }
+  
+    useEffect(() => {
+      Contributions()
+  }, []);
+  
+  
   return (
     <>
     <div className="contentContribution">
