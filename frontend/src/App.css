@@ -1,4 +1,9 @@
 .App{
   margin: 0;
-  background-color:#F2FAFD;
+  background-color: #F2FAFD;
+  /* background-color: aqua; */
+  display: flex;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }

@@ -1,0 +1,55 @@
+.contentCard{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+.contriCard{
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    width: fit-content;
+    padding: 1em;
+    margin: 1.5em 0 1.5em 0;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+}
+.contriImage{
+    width: 32%;
+    height:15%
+}
+.contriDetails{
+    padding: 1em;
+}
+.titleDate{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+}
+.contriTitle{
+    font-size: 24px;
+    font-weight: 600;
+    text-align: left;
+}
+.linkButton{
+    padding: 2px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.contriBtn{
+    text-align: center;
+    margin: 0.5em 0em 0.5em 0;
+    background-color: rgb(13, 129, 231);
+    color: whitesmoke;
+   border-radius: 8px;
+   width:fit-content;
+   padding: 0.5em 1.5em 0.5em 1.5em;
+}
+.completed{
+    font-size: 18px;
+    font-weight: 500;
+}
