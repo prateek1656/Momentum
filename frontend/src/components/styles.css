@@ -1,14 +1,20 @@
 .sidenav {
-    display: flex;
-    padding: 40px 90px 90px 90px;
-    flex-direction: column;
-    text-align: left;
+  padding: 40px 90px 90px 90px;
     /* justify-content: center; */
     background-color: #01BFBD;
-    position: sticky;
+    /* position: sticky; */
+    /* height: 100vh; */
   }
   .logo{
-    padding-bottom: 90px;
+    height: auto;
+    width: 100%;
+    margin-bottom: 5rem;
+  }
+  .options{
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    text-align: left;
   }
   .sidenav a {
     font-weight: 500;

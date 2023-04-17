@@ -33,7 +33,12 @@ module.exports = (sequelize, Sequelize) => {
 		},
 		last_login:{
 			type: Sequelize.DATE
-		}
+		},
+        caim_id:{
+            type: Sequelize.UUID,
+            allowNull: false,
+            unique: true
+        }
     }, {
         underscored: true,
         freezeTableName: true,

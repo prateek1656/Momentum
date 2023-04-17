@@ -2,23 +2,23 @@ import React, { useState } from 'react'
 // import {Link, NavLink}  from "react-router-dom";
 import { useEffect, useLocation } from "react";
 import "./styles.css";
-
+import momentum_logo from './momentum.png'
 const Sidebar=()=> {
    
   return (
-    <>
   
 <div className="sidenav">
-<div className="logo">
-    <img className='logo' src="./" alt="logo" />
-  </div>
-  <a href="#">Feed</a>
-  <a href="#">Contribution</a>
-  <a href="#">Projects</a>
-  <a href="#">Account</a>
+    <img className = "logo" src={momentum_logo} alt="logo" />
+    <div className="options">
+  <a href="/feed">Feed</a>
+  <a href="/contribution">Contribution</a>
+  <a href="/project">Projects</a>
+  <a href="/account">Account</a>
+  <a href="/login">Login</a>
+  
+    </div>
 </div>
 
-</>
   )
 }
 

@@ -3,8 +3,8 @@
 const db = require('../models')
 
 
-const projectsDeleteByIdController = async (req, res, next) => {
-    const model = db.projects
+const ProjectsDeleteByIdController = async (req, res, next) => {
+    const model = db.Projects
     model.destroy(
         {where: {id: req.params.id},}
     ).then(
@@ -20,4 +20,4 @@ const projectsDeleteByIdController = async (req, res, next) => {
 }
     
     
-module.exports = projectsDeleteByIdController
+module.exports = ProjectsDeleteByIdController

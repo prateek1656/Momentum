@@ -3,7 +3,7 @@
 const db = require('../models')
 
 
-const reward_typeUpdateController = async (req, res, next) => {
+const Reward_typeUpdateController = async (req, res, next) => {
     const body = req.body
     const id = body.id
     if (id == null) {
@@ -13,7 +13,7 @@ const reward_typeUpdateController = async (req, res, next) => {
             'msg': 'id of the object to be updated is missing from body'
         })
     }
-    const model = db.reward_type
+    const model = db.Reward_type
     model.update(body, {where: {id: id}}).then(
         (result) => {
             res.status(204).send()
@@ -27,4 +27,4 @@ const reward_typeUpdateController = async (req, res, next) => {
 }
     
     
-module.exports = reward_typeUpdateController
+module.exports = Reward_typeUpdateController

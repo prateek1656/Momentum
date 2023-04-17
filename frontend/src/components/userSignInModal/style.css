@@ -1,0 +1,133 @@
+.open_modal{
+	display: block;
+	position: absolute;
+	bottom: 0;
+	z-index: 9999;
+	min-width: 100%;
+	align-items: end;
+	background-color: white;
+	height: fit-content;
+	
+  }
+  .closed_modal{
+	display: none;
+  }
+  .contentHeading {
+	width: 100%;
+	height: auto;
+	align-items: center;
+	text-align: center;
+  }
+  
+  .modal_content{
+	margin: auto;
+	width: 50%;
+	text-align: center
+  }
+  .signInOptions {
+	display: block;
+	justify-content: center;
+	align-items: center;
+	gap: 0.4em;
+  }
+  
+  
+ .signInOption {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	gap: 2em;
+	margin: 2em auto;
+  }
+  
+	.socailButtons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5em;
+	background-color: var(--ion-background-color);
+	height: 2.5em;
+	min-width: 8em;
+	width: 100%;
+	padding: 0.3em 0.5em;
+	position: relative;
+	cursor: pointer;
+  }
+  
+  .Google_logo {
+	height: 100%;
+  }
+  
+  .Google_logo_img {
+	height: 100%;
+	width: 100%;
+  }
+  
+  .emailSignInButton {
+	background-color: var(--ion-background-color);
+	height: 2.5em;
+	width: 100%;
+	cursor: pointer;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 1em auto;
+	text-align: center;
+  }
+  
+  .emailSignInButton p {
+	color: var(--ion-color-tertiary-text);
+  }
+  
+  .emailSignIn {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	width: 100%;
+	position: relative;
+  }
+  
+  .emailSignIn ion-input {
+	--box-shadow: none;
+	--background: var(--ion-background-color);
+	--padding-start: 1em;
+	--padding-end: 1em;
+	--border-radius: 0em;
+	text-align: left;
+	--width: 100%;
+	min-width: 20em;
+	text-align: center;
+  }
+  
+  .emailSignIn ion-button {
+	--box-shadow: none;
+	--border-radius: 20px;
+	width: fit-content;
+	margin: 1em auto;
+  }
+  
+  .emailSignIn p {
+	margin: 0;
+	text-align: left;
+	cursor: pointer;
+	width: fit-content;
+  }
+  
+  .emailSignIn .signUpButton {
+	cursor: pointer;
+  }
+  
+  .signUpButton {
+	cursor: pointer;
+  }
+  
+  .errorMessage {
+	color: var(--ion-color-danger);
+  }
+  
+  .successMessage {
+	color: var(--ion-color-success);
+	max-width: 15em;
+	margin: auto;
+  }
+  

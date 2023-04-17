@@ -5,8 +5,8 @@ const ControllerOrders = require('./orders')
 const QueryUtils = require('../utils/query.utils')
 
 
-const reward_typeSearchController = async (req, res, next) => {
-    const model = db.reward_type
+const Reward_typeSearchController = async (req, res, next) => {
+    const model = db.Reward_type
     try {
         // Get all query parameters
         let limit = parseInt(req.query.limit)
@@ -116,5 +116,5 @@ const reward_typeSearchController = async (req, res, next) => {
 }
     
     
-module.exports = reward_typeSearchController
+module.exports = Reward_typeSearchController
 

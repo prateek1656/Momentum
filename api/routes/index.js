@@ -3,7 +3,7 @@ const router = express.Router()
 
 // Users
 const UserByIdController = require('../controllers/userById.controller')
-const UserCreateController =  require('../controllers/userCreate.controller')
+const UserCreateController  =  require('../controllers/userCreate.controller')
 const UserSearchController = require('../controllers/userSearch.controller')
 const UserUpdateController = require('../controllers/userUpdate.controller')
 const UserDeleteByIdController = require('../controllers/userDeleteById.controller')
@@ -37,16 +37,16 @@ router.put('/contribution', ContributionUpdateController)
 router.delete('/contribution/:id', ContributionDeleteByIdController)
 router.post('/contribution/search', ContributionSearchController)
 
-
-
-//todo apis
-// api to get the projects in which user have contributed
-// api to get the projects made by user only
-// filters
+//< Important APIS
+// api to get the projects in which a perticular user have contributed //>done
+// api to get the projects made by user only //>done
+// getting list of all contributors //>done
+// filters //>done
 	// sorting by date
 	// type contribution
 	// reward types
-// loading comments of a project
+// searching
+// verifying contribution //>done
+// loading comments of a project //>done
 
-	
 module.exports = router

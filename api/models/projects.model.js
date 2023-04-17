@@ -10,6 +10,10 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.STRING,
             allowNull: false
         },
+        created_by:{
+            type: Sequelize.UUID,
+            allowNull: false,
+        },
 		image_url:{
 			type: Sequelize.STRING,
             allowNull: true,
@@ -22,7 +26,7 @@ module.exports = (sequelize, Sequelize) => {
 			type: Sequelize.STRING,
             allowNull: false,
 		},
-		contribution_type:{
+		contribution_type_id:{
 			type: Sequelize.UUID,
             allowNull: false,
 		},
@@ -30,7 +34,7 @@ module.exports = (sequelize, Sequelize) => {
 			type: Sequelize.DATE,
             allowNull: false,
 		},
-		reward_type:{
+		reward_type_id:{
 			type: Sequelize.UUID,
             allowNull: false,
 		},
@@ -57,7 +61,11 @@ module.exports = (sequelize, Sequelize) => {
 		is_rewarded:{
 			type: Sequelize.BOOLEAN, 
             allowNull: false
-		}
+		},
+        comments :{
+			type: Sequelize.JSON,
+            defaultValue: {}
+		},
     }, {
         underscored: true,
         freezeTableName: true,

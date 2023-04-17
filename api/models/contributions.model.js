@@ -14,6 +14,11 @@ module.exports = (sequelize, Sequelize) => {
             type: Sequelize.UUID,
 			allowNull: false,
         },
+        is_verified:{
+            type: Sequelize.BOOLEAN,
+            allowNull: false,
+            defaultValue: false,
+        }
     }, {
         underscored: true,
         freezeTableName: true,
