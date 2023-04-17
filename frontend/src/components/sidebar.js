@@ -53,11 +53,11 @@ return (
 <div className="sidenav">
     <img className = "logo" src={momentum_logo} alt="logo" />
     <div className="options">
-  <a href="#">Feed</a>
-  <a href="#">Contribution</a>
-  <a href="#">Projects</a>
-  <a href="#">Account</a>
-  <a href="/project" onClick={handleSignOut}>Logout</a>
+  <a href="/feed">Feed</a>
+  <a href="/contribution">Contribution</a>
+  <a href="/project">Projects</a>
+  <a href="/account">Account</a>
+  <a href="/login">Login</a>
   
     </div>
 </div>
