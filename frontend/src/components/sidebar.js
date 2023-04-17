@@ -54,10 +54,10 @@ return (
     <img className = "logo" src={momentum_logo} alt="logo" />
     <div className="options">
   <a href="/feed">Feed</a>
-  <a href="/contribution">Contribution</a>
-  <a href="/project">Projects</a>
+  <a href="/contributions">Contribution</a>
+  <a href="/projects">Projects</a>
   <a href="/account">Account</a>
-  <a href="/login">Login</a>
+  <a href="/projects" onClick={handleSignOut}>Logout</a>
   
     </div>
 </div>

@@ -4,6 +4,7 @@
     background-color: #01BFBD;
     position: sticky; 
      height: 100vh;
+     width: 25%;
   }
   .sidenav .logo{
     height: auto;

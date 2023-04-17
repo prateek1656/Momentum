@@ -3,7 +3,7 @@ import { useEffect, useLocation } from "react";
 import "./projectFeed.css";
 import Sidebar from "../../components/sidebar";
 import ContributionCard from "../Contributions Card/contributionCard";
-
+import { getUserAllProjects } from '../../contexts/FetchContext';
 const ProjectFeed = (props) => {
     const [data, setdata] = useState([
         {
@@ -34,6 +34,18 @@ const ProjectFeed = (props) => {
             completed: 50,
         },
     ])
+    
+    async function UserProjects() {
+      const project = await getUserAllProjects()
+      // setAllProjects(projects)
+      console.log(project);
+  }
+  
+  useEffect(() => {
+    // Projects()
+    // UserProjects()
+    UserProjects()
+}, []);
   return (
     <>
     <div className="contentCard">
@@ -42,6 +54,7 @@ const ProjectFeed = (props) => {
         <div className="title">
          Your Projects
         </div>
+        <div type="button" class="feedBtn"> <a href="/create">Create Project</a></div>
         {data.map((item)=>{
           return (
             <ContributionCard title={item.title} url={item.url} desc={item.desc} date={item.date} completed={item.completed}/>

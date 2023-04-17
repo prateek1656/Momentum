@@ -7,20 +7,8 @@ import Sidebar from "../../components/sidebar";
 
 const Project = () => {
   const [allProjects, setAllProjects] = useState([])
-  
-    async function Projects() {
-        const projects = await getAllProjects()
-        setAllProjects(projects)
-        console.log(projects);
-    }
-    
-    
-    async function UserProjects() {
-        const project = await getUserAllProjects()
-        // setAllProjects(projects)
-        console.log(project);
-    }
-    
+
+  // will extract the informatio of project when will provide it's id
     async function ProjectInfo() {
       const id = "af5e62ff-db8f-11ed-a8b3-028836aad06a"
         const project_details = await getProject(id)

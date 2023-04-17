@@ -1,5 +1,7 @@
 import './App.css';
 import Contribution from '../src/Pages/Contribution/contribution';
+import ContributionFeed from '../src/Pages/Contribution Feed/ContributionFeed';
+import ProjectFeed from '../src/Pages/Project Feed/projectFeed';
 import Project from './Pages/project/Project';
 import Feed from '../src/Pages/Feed/feed';
 import { AuthContextProvider, UserAuth } from './contexts/AppFirebaseContext';
@@ -17,14 +19,16 @@ function App() {
       {/* <Sidebar /> */}
       {/* <Contribution/> */}
       <Switch>
-      <Route exact path="/project">
+      <Route exact path="/projects">
         <AppProtectedRouteOne>
-          <Project/>
+          {/* <Project/> */}
+          <ProjectFeed/>
         </AppProtectedRouteOne>
       </Route>
-      <Route exact path="/contribution">
+      <Route exact path="/contributions">
         <AppProtectedRouteOne>
-          <Contribution/>
+          {/* <Contribution/> */}
+          <ContributionFeed/>
         </AppProtectedRouteOne>
       </Route>
       <Route exact path="/feed">
@@ -37,9 +41,14 @@ function App() {
           <CreateProject/>
         </AppProtectedRouteOne>
       </Route>
-      <Route exact path="/login">
+      <Route exact path="/project/:id">
         <AppProtectedRouteOne>
           <Project/>
+        </AppProtectedRouteOne>
+      </Route>
+      <Route exact path="/create">
+        <AppProtectedRouteOne>
+          <CreateProject/>
         </AppProtectedRouteOne>
       </Route>
       </Switch>

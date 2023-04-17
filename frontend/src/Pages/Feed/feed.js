@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useEffect, useLocation } from "react";
 import "./feed.css";
 import Sidebar from "../../components/sidebar";
+import { getAllProjects,  } from '../../contexts/FetchContext';
+
 
 const Feed = () => {
     const [data, setdata] = useState([
@@ -45,7 +47,18 @@ const Feed = () => {
             type:"code"
         },
     ])
-
+    
+    async function Projects() {
+        const projects = await getAllProjects()
+        console.log(projects);
+    }
+    
+    useEffect(() => {
+        // Projects()
+        // UserProjects()
+        Projects()
+    }, []);
+    
     const feedCard=(props)=>{
         return(
             <div className="feedCard">

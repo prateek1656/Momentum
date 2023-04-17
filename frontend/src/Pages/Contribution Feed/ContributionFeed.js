@@ -42,11 +42,13 @@ const ContributionFeed = (props) => {
         <div className="title">
           Contribution  
         </div>
+        <div className="contribution_feed">
         {data.map((item)=>{
           return (
             <ContributionCard title={item.title} url={item.url} desc={item.desc} date={item.date} completed={item.completed}/>
-          )
-        })}
+            )
+          })}
+          </div>
     </div>
     </div>
     </>
