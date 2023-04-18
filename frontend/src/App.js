@@ -10,6 +10,7 @@ import { IonReactRouter } from '@ionic/react-router';
 import { Switch, Route } from 'react-router-dom';
 import CreateProject from './Pages/Create Project/createProject';
 import EditProject from './Pages/Edit Project/editProject';
+import Home from './Pages/Home/home';
 function App() {
   // let [appUser, setAppUser] = useState('')
   return (
@@ -19,6 +20,11 @@ function App() {
       {/* <Sidebar /> */}
       {/* <Contribution/> */}
       <Switch>
+      <Route exact path="/">
+        {/* <AppProtectedRouteOne> */}
+         <Home/>
+        {/* </AppProtectedRouteOne> */}
+      </Route>
       <Route exact path="/projects">
         <AppProtectedRouteOne>
           {/* <Project/> */}
