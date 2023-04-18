@@ -1,0 +1,30 @@
+
+.background{
+  /* position: absolute; */
+  margin: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-repeat: no-repeat;
+  justify-self: center;
+  align-items: center;
+  background-image: url("momentum.jpeg");
+  background-color: black;
+  background-position: center;
+}
+.getStarted{
+    /* position: relative;
+    left: 1;
+    right: 1;
+    top: 1;
+    bottom: 1; */
+    position: relative;
+    top: 12%;
+    left: 5%;
+    margin: auto;
+    background-color: rgb(16, 75, 171);
+}
+.getStarted a{
+    text-decoration: none;
+    color: white;
+}
