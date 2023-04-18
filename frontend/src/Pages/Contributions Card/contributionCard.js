@@ -22,7 +22,7 @@ const ContributionCard = (props) => {
                {props.desc}...
             </div>
             <div className="linkButton">
-            <div type="button" class="contriBtn"><a href={props.contribution?`/project/${props.project_id}`:`/projectDetails`}>Check More</a></div>
+            <div type="button" class="contriBtn"><a href={props.contribution?`/project/${props.project_id}`:`/projectDetails/${props.project_id}`}>Check More</a></div>
             <div className="completed">
                 {props.completed}% completed
             </div>

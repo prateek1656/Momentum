@@ -7,7 +7,7 @@
 .contriCard{
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    width: fit-content;
+    /* width: fit-content; */
     padding: 1em;
     margin: 1.5em 0 1.5em 0;
     border-radius: 8px;
@@ -32,6 +32,7 @@
     font-size: 24px;
     font-weight: 600;
     text-align: left;
+    padding-right: 1em;
 }
 .linkButton{
     padding: 2px;

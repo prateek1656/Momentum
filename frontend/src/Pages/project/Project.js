@@ -6,14 +6,14 @@ import { getAllProjects,getUserAllProjects, getProject } from '../../contexts/Fe
 import Sidebar from "../../components/sidebar";
 
 const Project = () => {
-  const [allProjects, setAllProjects] = useState([])
+  const [Projectinfo, setProjectinfo] = useState('')
 
   // will extract the informatio of project when will provide it's id
     async function ProjectInfo() {
-      const id = "af5e62ff-db8f-11ed-a8b3-028836aad06a"
-        const project_details = await getProject(id)
-        // setAllProjects(projects)
-        console.log(project_details);
+      console.log((window.location.pathname.split('/'))[2])
+      const project= await getProject((window.location.pathname.split('/'))[2])
+      setProjectinfo(project)
+      console.log(project)
     }
     
     useEffect(() => {
@@ -29,11 +29,11 @@ const Project = () => {
         <Sidebar/>
     <div className="contProject">
     <div className="titleProject">
-     Your Projects
+     Your Project
     </div>
     <div className="projectProject">
       <div className="titleProject">
-      Project Title
+      {Projectinfo.name}
       </div>
         <div className="buttonsProject">
         <button type="button" class="buttonProject"><a href="/createProject">Create</a></button>
@@ -46,26 +46,27 @@ const Project = () => {
         <div className="detailsProject">
         <img src="https://blog.hubbado.com/content/images/2020/01/projectmanager.png" alt="" />
         <div className="otherDetailsProject">
-        <div class="headingProject">Title</div>
-        <div class="descProject">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae illo doloremque voluptatem nobis exercitationem distinctio deserunt laboriosam fugiat vero ipsam voluptate atque, quas neque similique asperiores iure velit, explicabo sint natus autem? Ducimus cumque velit labore id modi ipsa corporis sapiente dolorum, nostrum dolores fugit voluptas officia rerum non assumenda pariatur voluptatibus? Ipsa accusamus quis quia, quasi ipsam accusantium reprehenderit. Reprehenderit labore iusto architecto dolorem sapiente atque est pariatur dolorum quia, eum voluptatum non nostrum omnis quam, voluptas enim beatae sunt recusandae accusamus accusantium repellat qui. Facilis, placeat, ipsa maiores unde qui, culpa ex neque temporibus provident adipisci illo voluptas.</div>
+        <div class="headingProject">{Projectinfo.name}</div>
+        <div class="descProject"> {Projectinfo.description}</div>
         </div>
         </div>
         <div className="datesProject">
           <div className="AmtsProject">
-          <div class="labelsProject">Goal Amt</div>
-          <div class="labelsProject">Current Amt</div>
+          <div class="labelsProject">Goal: {Projectinfo.contribution_goal} </div>
+          {/* {(window.location.pathname.split('/'))[2]} */}
+          {/* <div class="labelsProject">Current Amount: </div> */}
           </div>
           <div className="dateDetailsProject">
-          <div class="labelsProject">Created At:1 March 2023</div>
-          <div class="labelsProject">Last Updated At:2 April 2023</div>
-          <div class="labelsProject">End Date:2 June 2023</div>
+          <div class="labelsProject">Created At:{Projectinfo.created_at}</div>
+          <div class="labelsProject">Last Updated At:{Projectinfo.updated_at}</div>
+          <div class="labelsProject">End Date:{Projectinfo.end_date}</div>
           </div>
         </div>
         <div className="contriProject">
-        <div class="labelsProject">Contribution Type</div>
-        <div class="labelsProject">Contribution Link</div>
+        <div class="labelsProject">Contribution Type:{Projectinfo.documents_url}</div>
+        <div class="labelsProject">Contribution Link:{Projectinfo.contribution_link}</div>
         </div>
-        <div class="labelsProject">Reward Type</div>
+        <div class="labelsProject">Reward:{Projectinfo.reward_amount}</div>
     </div>
     </div>
     </div>

@@ -46,17 +46,17 @@ function App() {
           <EditProject/>
         </AppProtectedRouteOne>
       </Route>
-      <Route exact path="/project/:id">
+      {/* <Route exact path="/project/:id">
         <AppProtectedRouteOne>
          hello
         </AppProtectedRouteOne>
-      </Route>
+      </Route> */}
       <Route exact path="/project/:project_id">
         <AppProtectedRouteOne>
        <Contribution/>
         </AppProtectedRouteOne>
       </Route>
-      <Route exact path="/projectDetails">
+      <Route exact path="/projectDetails/:project_id">
         <AppProtectedRouteOne>
          <Project/>
         </AppProtectedRouteOne>

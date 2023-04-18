@@ -4,24 +4,39 @@ import { useEffect, useLocation } from "react";
 import {UserAuth} from "../../contexts/AppFirebaseContext"
 import "./contribution.css";
 import Sidebar from "../../components/sidebar";
-import { getAppUser,getAllUserContribution } from '../../contexts/FetchContext';
+import { useParams } from "react-router-dom"
+import { getAppUser,getProject } from '../../contexts/FetchContext';
 
 const Contribution = () => {
+  // const [project, setproject] = useState()
   const {user} = UserAuth()
-  const [allContributions, setAllContributions] = useState([])
   
-    async function Contributions() {
-        const user_details = await getAppUser(user.uid)
-        console.log(user_details);
-        const contributions = await getAllUserContribution(user_details.id)
-        setAllContributions(contributions)
-        console.log(contributions);
+  //   async function Contribution() {
+  //     const { id } = useParams()
+  //     console.log("t")
+  //     const project= await getProject()
+  //       // const user_details = await getAppUser(user.uid)
+  //       // // console.log(user_details);
+  //       // const contributions = await getAllUserContribution(user_details.id)
+  //       // setAllContributions(contributions)
+  //       // console.log(contributions);
+  //   }
+  
+  const [project, setproject] = useState('')
+
+  // will extract the informatio of project when will provide it's id
+    async function ConInfo() {
+      console.log((window.location.pathname.split('/'))[2])
+      const proj= await getProject((window.location.pathname.split('/'))[2])
+      setproject(proj)
+      console.log(project)
     }
-  
+    
     useEffect(() => {
-      Contributions()
+      // Projects()
+      // UserProjects()
+      ConInfo()
   }, []);
-  
   
   return (
     <>
@@ -30,11 +45,11 @@ const Contribution = () => {
     <div className="cont">
     <div className="contribution">
     <div className="title">
-        Contribution Project
+        {project.name}
         </div>
         <div className="buttons">
         <button type="button" class="btn btn-dark btn1">Discuss</button>
-        <button type="button" class="btn btn-dark">Contribute</button>
+        <button type="button" class="btn btn-dark"> <a style={{textDecoration:"none", color:"white"}} href={project.contribution_link}>Contribute</a></button>
         </div>
     </div>
     <div className="contributionComponent">
@@ -43,23 +58,23 @@ const Contribution = () => {
         <img src="https://blog.hubbado.com/content/images/2020/01/projectmanager.png" alt="" />
         
         <div className="otherDetails">
-        <div className="labels">End Date: 1 March 2023</div>
-        <div className="labels">Reward: tax debate</div>
-        <div className="labels">Contribution Type: Money</div>
-        <div className="labels">Contribution Link: wwww.jedjee</div>
-        <div className="labels">Goal: Rs30k</div>
+        <div className="labels"> End Date;{project.end_date}</div>
+        <div className="labels">Reward: {project.reward_amount}</div>
+        <div className="labels">Contribution Type: {project.documents_url}</div>
+        <div className="labels">Contribution Link:  {project.contribution_link}</div>
+        <div className="labels">Goal:  {project.contribution_goal}</div>
         </div>
         </div>
           <div className="contribelowImg">
-          <div className="labels2">My First Project</div>
+          <div className="labels2">{project.name}</div>
           <div className="labels2">40% completed</div>
           </div>
         <div className="desc">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias et quibusdam aliquid incidunt suscipit nisi eaque cumque distinctio dolorum fuga est veritatis enim odio alias, vero soluta nemo necessitatibus. Exercitationem dolores quia asperiores fuga, ex, molestias debitis porro vero architecto explicabo id! Eligendi eaque quae facere nisi excepturi nostrum nam cum velit et corporis? Dolor praesentium harum nostrum optio modi. Dolores, ad? Ullam, ad amet consectetur, rem itaque nam eius enim natus nisi dolores inventore error. Ea nobis delectus, est aliquam aspernatur, commodi corporis cupiditate deserunt obcaecati aut aliquid, iusto nemo officia inventore? Veniam libero totam beatae expedita eos commodi!
+           {project.description}
         </div>
         <div className="contridateDetails">
-          <div className="labels2">Last Updated At: 2 April 2023</div>
-          <div className="labels2">Created At: 1 March 2023</div>
+          <div className="labels2">Last Updated At: {project.updated_at}</div>
+          <div className="labels2">Created At: {project.created_at}</div>
           </div>
     </div>
     </div>
