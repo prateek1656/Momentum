@@ -1,7 +1,7 @@
 // import stuff from react library
 import { useEffect, useState } from 'react';
 // import components from 3rd party ui libraries
-import { IonButton, IonInput, IonModal, IonPage, IonSpinner } from '@ionic/react'
+import { IonButton, IonInput, IonModal, IonPage, IonSpinner, IonLabel } from '@ionic/react'
 // import from context
 import { UserAuth } from '../../contexts/AppFirebaseContext';
 // import from utils
@@ -124,9 +124,9 @@ const AppUserSignInModal = (props) => {
                     value={userEmail}
                     placeholder="Email"
                     type="email"
-                    label='email'
                     onIonChange={(e) => setUserEmail(e.target.value)}
                 >
+                <IonLabel style={{ marginTop: '1em', fontSize:'1.5rem' }}>Email</IonLabel>
                 </IonInput>
                 <IonInput 
                     value={userPassword}
@@ -159,6 +159,7 @@ const AppUserSignInModal = (props) => {
                     label='email'
                     onIonChange={(e) => setUserEmail(e.target.value)}
                 >
+                <IonLabel style={{ marginTop: '1em' }}>Email</IonLabel>
                 </IonInput>
                 <IonInput 
                     value={userPassword}
@@ -230,7 +231,7 @@ const AppUserSignInModal = (props) => {
                         )
                     })}
                 </div>
-                <p>or use your email account</p>
+                {/* <p>or use your email account</p> */}
                 {isSignInSelected?<EmailSignIn />: <EmailSignUp />}
             </div>
         )
