@@ -6,14 +6,15 @@ import { getAllProjects,getUserAllProjects, getProject } from '../../contexts/Fe
 import Sidebar from "../../components/sidebar";
 
 const Project = () => {
-  const [Projectinfo, setProjectinfo] = useState('')
+  const [Projectinfo, setProjectinfo] = useState({})
 
   // will extract the informatio of project when will provide it's id
     async function ProjectInfo() {
-      console.log((window.location.pathname.split('/'))[2])
+      // console.log((window.location.pathname.split('/'))[2])
       const project= await getProject((window.location.pathname.split('/'))[2])
+      console.log(project);
       setProjectinfo(project)
-      console.log(project)
+      console.log(Projectinfo)
     }
     
     useEffect(() => {
@@ -29,7 +30,7 @@ const Project = () => {
         <Sidebar/>
     <div className="contProject">
     <div className="titleProject">
-     Your Project
+     Your ProjectuserId
     </div>
     <div className="projectProject">
       <div className="titleProject">
@@ -63,8 +64,8 @@ const Project = () => {
           </div>
         </div>
         <div className="contriProject">
-        <div class="labelsProject">Contribution Type:{Projectinfo.documents_url}</div>
-        <div class="labelsProject">Contribution Link:{Projectinfo.contribution_link}</div>
+        <div class="labelsProject">Contribution Type: code</div>
+        <div class="labelsProject">Contribution Link: github/prateek/momentum</div>
         </div>
         <div class="labelsProject">Reward:{Projectinfo.reward_amount}</div>
     </div>

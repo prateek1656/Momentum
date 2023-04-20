@@ -158,24 +158,20 @@ async function getUserAllProjects(userId) {
 }
 
 async function getProject(project_id) {
-    let apiUrl=`${API_HOST}/${API_VERSION}/project/search`
+    let apiUrl=`${API_HOST}/${API_VERSION}/project/${project_id}`
+    // let apiUrl=`${API_HOST}/${API_VERSION}/project/search`
     const body = {id: project_id}
     const options = {
         headers: {'Content-Type': 'application/json'},
     }
     console.log(body);
-    const res = await axios.post(
-        apiUrl,
-        body,
-        options
+    const res = await axios.get(
+        apiUrl
     )
     if (res.status === 200) {
         const resJson = await res.data
         console.log(resJson);
-        if (resJson.length > 0) { 
-            return resJson
-        }
-        
+        return resJson
     }
 }
 

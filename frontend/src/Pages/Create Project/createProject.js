@@ -15,6 +15,7 @@ const CreateProject = (props) => {
     if(user_details){
       console.log(user_details);
     data["created_by"] = user_details.id
+    console.log(user_details.id);
     console.log(data);
     const createdProject = await createProject(data)
     console.log(createdProject);
